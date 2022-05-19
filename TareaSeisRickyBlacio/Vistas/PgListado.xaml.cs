@@ -50,7 +50,7 @@ namespace TareaSeisRickyBlacio.Vistas
 
 
                 cliente.UploadValues("http://172.28.176.1/moviles/post.php", "DELETE", parametros);
-                DisplayAlert("Mensaje de alerta", "Ingreso Correcto", "ok");
+                DisplayAlert("Mensaje de alerta", "Se elimino correctamente", "ok");
             }
             catch (Exception ex)
 

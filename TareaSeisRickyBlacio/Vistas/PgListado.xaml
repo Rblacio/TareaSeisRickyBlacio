@@ -6,22 +6,26 @@
     <ContentPage.Content>
         <ScrollView>
             
-            <StackLayout Margin="15,15,15,15">
+            <StackLayout Margin="10,15,10,15">
                 <ListView x:Name="MyListView" BackgroundColor="#0FFF">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
 
                                 <StackLayout Orientation="Horizontal" Margin="0" >
-                                    <ContentView IsVisible="False">
-                                        <Entry x:Name="txtCodigo" Keyboard="Numeric" IsReadOnly="False" Text="{Binding codigo}"/>
+                                    <ContentView HorizontalOptions="FillAndExpand">
+                                        <Label x:Name="txtCodigo" Text="{Binding codigo}"/>
                                     </ContentView>
-                                    <ContentView>
+                                    <ContentView HorizontalOptions="FillAndExpand">
                                         <Label x:Name="lblnombre" Text="{Binding nombre}"/>
                                     </ContentView>
-                                    <ContentView>
+                                    <ContentView HorizontalOptions="FillAndExpand">
                                         <Label x:Name="lblapellido" Text="{Binding apellido}"/>
                                     </ContentView>
+                                    <ContentView HorizontalOptions="FillAndExpand">
+                                        <Label x:Name="lbledad" Text="{Binding edad}"/>
+                                    </ContentView>
+
                                     <ContentView HorizontalOptions="EndAndExpand">
                                         <Button Text="Editar" x:Name="btnEditar" Clicked="btnEditar_Clicked" Margin="0,0,0,5" BackgroundColor="Orange" TextColor="#FFF" />
                                     </ContentView>
