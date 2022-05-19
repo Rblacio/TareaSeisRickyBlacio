@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSeisRickyBlacio.Vistas.PgAgregarDatos"
+             Title="Ingresar nuevos registros">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="30, 15, 30, 0">
+                <ContentView>
+                    <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric"/>
+                </ContentView>
+                <ContentView>
+                    <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre"/>
+                </ContentView>
+                <ContentView>
+                    <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"/>
+                </ContentView>
+                <ContentView>
+                    <Entry x:Name="txtEdad" Placeholder="Ingrese el edad"/>
+                </ContentView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <ContentView Grid.Row="0" Grid.Column="0">
+                        <Button x:Name="btnInsertar" Text="Insertar" Clicked="btnInsertar_Clicked"/>
+                    </ContentView>
+                    <ContentView Grid.Row="0" Grid.Column="1">
+                        <Button x:Name="btnListado" Text="Ver lista" Clicked="btnListado_Clicked"/>
+                    </ContentView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

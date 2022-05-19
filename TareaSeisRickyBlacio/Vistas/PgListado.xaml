@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSeisRickyBlacio.Vistas.PgListado"
+             Title="Listado de registros">
+    <ContentPage.Content>
+        <ScrollView>
+            
+            <StackLayout Margin="15,15,15,15">
+                <ListView x:Name="MyListView" BackgroundColor="#0FFF">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <StackLayout Orientation="Horizontal" Margin="0" >
+                                    <ContentView IsVisible="False">
+                                        <Entry x:Name="txtCodigo" Keyboard="Numeric" IsReadOnly="False" Text="{Binding codigo}"/>
+                                    </ContentView>
+                                    <ContentView>
+                                        <Label x:Name="lblnombre" Text="{Binding nombre}"/>
+                                    </ContentView>
+                                    <ContentView>
+                                        <Label x:Name="lblapellido" Text="{Binding apellido}"/>
+                                    </ContentView>
+                                    <ContentView HorizontalOptions="EndAndExpand">
+                                        <Button Text="Editar" x:Name="btnEditar" Clicked="btnEditar_Clicked" Margin="0,0,0,5" BackgroundColor="Orange" TextColor="#FFF" />
+                                    </ContentView>
+                                    <ContentView >
+                                        <Button Text="Eliminar" x:Name="btnEliminar" Clicked="btnEliminar_Clicked" Margin="0,0,0,5" BackgroundColor="Red" TextColor="#FFF" />
+                                    </ContentView>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>
